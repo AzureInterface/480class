@@ -1,0 +1,97 @@
+body{
+    background-color: #e2e2e2;
+    color: #555;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+#main-header{
+    background-color: coral;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+footer {
+   background-color: #333;
+   margin-top: 40px;
+   padding: 20px; 
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    padding-left: 30px;
+}
+
+#nav {
+    background-color: #000;
+    padding: 20px 0;
+}
+
+#nav a {
+    color: white;
+    padding-top: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    color: coral;
+}
+
+#showcase {
+    background-image: url('../images/bg.png');
+    background-position: center right;
+    min-height: 300px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#showcase p{
+    color: white;
+    font-size: 44px;
+    padding-top: 40px;
+    font-weight: bold;
+    line-height: 1.4em;
+}
+
+#main {
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+
+#sidebar {
+    float: right;
+    width: 30%;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+
+button{
+    border: 1px solid #000;
+    background-color: coral;
+    font-weight: bold;
+    font-size: 18px;
+    color:black;
+    padding: 10px;
+}
+
+@media(max-width: 600px){
+    #main{
+        float: none;
+        width: 100%;
+    }
+    #sidebar{
+        float: none;
+        width: 100%;
+    }
+}
