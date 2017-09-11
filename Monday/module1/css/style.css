@@ -1,0 +1,13 @@
+body {
+    background-color: #e2e2e2;
+}
+
+.borders {
+    border: 1px solid red;
+}
+
+fieldset {
+    border: none;
+    padding-left: 0;
+    margin-left: 0;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello World</title>
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1 class="myHeader">Hello World!</h1>
+
+        <form action="/submit.php" method="post">
+        
+            <fieldset>
+            <input type="text" name="firstName" class="borders" placeholder="Enter your first name" required>
+            </fieldset>
+
+            <fieldset>
+            <input type="text" name="lastName" class="borders" placeholder="Enter your last name">
+            </fieldset>
+
+            <fieldset>
+                    <input type="date" name="email" class="borders" placeholder="Enter the date">
+            </fieldset>            
+
+            <fieldset>
+                <textarea name="message" class="borders" cols="30" rows="10" placeholder="Enter your message">
+                </textarea>
+            </fieldset>
+
+            <input type="submit" name="submit" id="submit" value="Submit">
+
+        </form>
+
+    </body>
+</html>
