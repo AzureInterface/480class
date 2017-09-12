@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Javascript Intro</title>
+
+    <style>
+        .p1 {
+            color: red;
+        }
+        button {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+
+<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1 id="myHeader">Hello World</h1>
+
+    <button id="btn1">This is button 1</button>
+
+    <button id="btn2">This is button 2</button>
+
+    <p id="myPara">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias vitae optio facere dolores deserunt incidunt adipisci dignissimos aspernatur, quam quo error provident et, consequuntur blanditiis quisquam doloribus nam expedita a?</p>
+    
+
+    <script type="text/javascript">
+        
+        $('#btn1').on('mouseover', function(){
+            $('#myPara').css('color', 'red');
+        });
+        
+    </script>
+
+</body>
+</html>
