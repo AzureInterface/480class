@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery Demo 2</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+
+    <style>
+        body{
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6em;
+        }
+        header{
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-bottom: 4px black solid;
+        }
+        .container{
+            width:80%;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="heading1">This is jQuery Demo2</h1>
+    </header>
+
+    <div id="container">
+        <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, corporis? Illum labore laboriosam magni, quam quae illo quod omnis provident neque iure necessitatibus? Vero sed eius, impedit ullam eos harum!</p>
+        <p id="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, corporis? Illum labore laboriosam magni, quam quae illo quod omnis provident neque iure necessitatibus? Vero sed eius, impedit ullam eos harum!</p>
+    
+    <input type="button" value="My Button" id="btn1">
+
+    <input type="button" value="My Button 2" id="btn2">
+
+    <ul id="list">
+        <li>This is a test</li>
+        <li>This is a test</li>
+        <li>This is a test</li>
+        <li>This is a test</li>
+        <li>This is a test</li>
+    </ul>
+    
+    </div>
+
+    <a href="http://google.com">Go to the Google!</a>
+
+    <script>
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                //$('#para1').show();
+                //$('#para1').html('<h1>hello there!</h1>');
+
+                //$('ul#list li:first').css('color', 'red');
+                //$('ul#list li:last').css('color', 'orange');
+                //$('ul#list li:odd').css('background-color', 'grey');
+                //$('*').hide();
+                //$('ul#list li:nth-child(3n)').css('background-color', 'grey');
+
+                //$('a[href="http://google.com"]').css('color', 'green');
+            });
+
+            /*
+            $('#btn2').dblclick(function(){
+                alert('hello world');
+            });
+            */
+
+            $('#btn2').mouseover(function(){
+                alert('hello world');
+            });
+
+
+        });
+    </script>    
+    
+</body>
+</html>
