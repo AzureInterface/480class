@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Javascript Objects & Methods</title>
+</head>
+<script>
+
+    //document.write(Math.random());
+    //var person = {name: 'kevin', city: 'phoenix'};
+    //document.write( JSON.stringify(person) );
+
+    var User = function(firstname, lastname, city){
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.city = city;
+    }
+
+    var steve = new User('steve', 'jones', 'phoenix');
+    var john = new User('john', 'jones', 'phoenix');
+
+    User.prototype.getname = function(){
+        return this.firstname + ' ' + this.lastname;
+    }
+
+    document.write(steve.getname());
+
+</script>
+<body>
+    
+</body>
+</html>
