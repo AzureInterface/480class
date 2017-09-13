@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery AJAX Demo</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+<style>
+        body{
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e2e2e2;
+            line-height: 1.6em;
+        }
+    </style>
+<body>
+     <button id="button1">Get All Posts</button>
+    <h1>Posts</h1>
+    <hr>
+    <div id="posts"></div>
+
+    <script>
+        $(document).ready(function(){
+
+            $('#button1').click(function(){
+                $.ajax({
+                    method: 'GET',
+                    url: 'https://jsonplaceholder.typicode.com/posts',
+                    dataType: 'json'
+                }).done(function(data){
+                    console.log(data);
+                    $.map(data, function(post, i){
+                        $('#posts').append('<h3>'+post.title+'</h3><p>'+post.body+'</p>');
+                    });
+                });
+            });
+
+        });
+    </script>
+
+</body>
+</html>
