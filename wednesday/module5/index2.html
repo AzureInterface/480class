@@ -18,6 +18,13 @@
     <hr>
     <div id="posts"></div>
 
+    <form id="postForm" action="/submit">
+        <input type="text" name="title" id="title" placeholder="Title"><br><br>
+        <textarea id="body" cols="30" rows="10" placeholder="Body"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
     <script>
         $(document).ready(function(){
 
@@ -32,6 +39,21 @@
                         $('#posts').append('<h3>'+post.title+'</h3><p>'+post.body+'</p>');
                     });
                 });
+            });
+
+            $('#postForm').submit(function(e){
+                e.preventDefault();
+
+                var title = $('#title').val();
+                var body = $('#body').val();
+                var url = $(this).attr('action');
+
+                $.post(url, {title:title, body:body}).done(function(){
+                    console.log('Post Saved');
+                });
+
+                $('#posts').append('<h3>'+ title+'</h3><p>'+ body + '</p>');
+
             });
 
         });
