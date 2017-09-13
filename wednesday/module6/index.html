@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS3 Demos</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color:white;
+            text-shadow: 2px 2px 0 red;
+        }
+        header{
+            background-color: blue;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        ul li{
+            display: inline;
+            font-weight: bold;
+            word-spacing: 5px;
+            font-size: 18px;
+        }
+        .container{
+            /*flex-direction: row;*/
+            padding: 0 40px;
+            /*align-items:flex-end;*/
+        }
+        .box1{
+            flex:1;
+            order: 1;
+        }
+        .box2{
+            flex: 3;
+            order: 2;
+        }
+        .box3{
+            flex:1;
+            order:3;
+        }
+        @media(min-width:480px){
+            .container{
+                display: inline-flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+            <h1>Hello World!</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="box1">
+            <h3>This is box1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam minima laudantium, commodi facilis</p>
+        </div>
+        <div class="box2">
+            <h3>This is box2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam minima laudantium, commodi facilis, quisquam natus itaque officia nemo assumenda deserunt architecto reprehenderit perspiciatis cum voluptatum magnam dolor maxime deleniti? Ducimus error accusantium id dolorum, commodi ipsa rem reprehenderit labore autem omnis excepturi odio quibusdam necessitatibus rerum suscipit voluptates nostrum vero! Aliquam maxime fuga ipsam quidem sed? Necessitatibus alias explicabo velit nihil consequatur? Perspiciatis quis accusantium consectetur illo, qui commodi quasi. Deleniti sequi ullam dicta voluptates!</p>
+        </div>
+        <div class="box3">
+            <h3>This is box3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam minima laudantium, commodi facilis</p>
+        </div>
+    </div>
+
+</body>
+</html>
