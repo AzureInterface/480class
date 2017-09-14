@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Responsive Page</title>
+    <style>
+            .container {
+                padding: 0 40px;
+                display: inline-flex;
+            }
+            header {
+                padding: 10px;
+                background-color: blue;
+                color: white;
+                border-radius: 15px;
+                margin: 0 30px;
+            }
+            header h1 {
+                padding-left: 40px;
+            }
+            nav {
+                word-spacing: 10px;
+            }
+            nav ul li {
+                display: inline;
+            }
+            .box1{
+                order: 1;
+                flex:1;
+                padding: 5px;
+            }
+            .box2{
+                order: 2;
+                flex: 3;
+                padding: 5px;
+            }
+            .box3{
+                order:3;
+                flex:1;
+                padding: 5px;
+            }
+            @media screen and (max-width: 600px) {
+                .container {
+                    display: block;
+                    font-size: 16px;
+                }
+                nav {
+                    display: none;
+                }
+            }
+            @media screen and (min-width: 800px) {
+                .container {
+                    font-size: 18px;
+                }
+            }
+            @media screen and (min-width: 1200px) {
+                .container {
+                    font-size: 20px;
+                }
+            }    
+        </style>    
+</head>
+<body>
+        <header>
+                <h1>Hello World</h1>
+                <nav>
+                    <ul>
+                        <li>Home</li>
+                        <li>Products</li>
+                        <li>Services</li>
+                        <li>About</li>
+                        <li>Blog</li>
+                        <li>Contact</li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                    <div class="box1">
+                        <h3>This is box1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam minima laudantium, commodi facilis</p>
+                    </div>
+                    <div class="box2">
+                        <h3>This is box2</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam minima laudantium, commodi facilis, quisquam natus itaque officia nemo assumenda deserunt architecto reprehenderit perspiciatis cum voluptatum magnam dolor maxime deleniti? Ducimus error accusantium id dolorum, commodi ipsa rem reprehenderit labore autem omnis excepturi odio quibusdam necessitatibus rerum suscipit voluptates nostrum vero! Aliquam maxime fuga ipsam quidem sed? Necessitatibus alias explicabo velit nihil consequatur? Perspiciatis quis accusantium consectetur illo, qui commodi quasi. Deleniti sequi ullam dicta voluptates!</p>
+                    </div>
+                    <div class="box3">
+                        <h3>This is box3</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam minima laudantium, commodi facilis</p>
+                    </div>
+                </div>    
+</body>
+</html>
