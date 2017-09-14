@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Drag & Drop</title>
+    <style>
+        #div1 {
+            border: 1px solid black;
+            height: 400px;
+            width: 400px;
+            padding: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="css1.css">
+    <link rel="stylesheet" href="css2.css">
+    <link rel="stylesheet" href="css3.css">
+</head>
+<body>
+    <h1>Drag the image into the rectangle</h1>
+    <div id="div1" ondrop="drop(event)" 
+    ondragover="allowDrop(event)"></div>
+    <br>
+    <div id="div2" ondrag="drag(event)" 
+    draggable="true" ondragstart="drag(event)">
+
+    <img src="horse.png" id="drag1" draggable="true" 
+    ondragstart="drag(event)">
+
+    </div>
+
+    
+
+    <script>
+        function drop(ev){
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData('text');
+            ev.target.appendChild(document.getElementById(data));
+        }
+
+        function drag(ev){
+            console.log(ev.dataTransfer);
+            ev.dataTransfer.setData('text', ev.target.id);
+        }
+
+        function allowDrop(ev){
+            ev.preventDefault();
+        }
+    </script>
+
+</body>
+</html>
