@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FileReader Demo!</title>
+    <style>
+        body{
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Let's read a file!</h1>
+    <input type="file" id="file" onchange="LoadTextFile()"><br><br>
+    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+    <script>
+        function LoadTextFile(){
+            var fileInput = document.getElementById('file');
+            //console.log(fileInput.files[0]);
+
+            var reader = new FileReader();
+
+            reader.onload = function(e){
+                var msgBox = document.getElementById('message');
+                msgBox.value = e.target.result;
+            }
+
+            reader.onerror = function(e){
+                alert('something went wrong');
+            }
+
+            reader.readAsText(fileInput.files[0]);
+        }
+    </script>
+</body>
+</html>

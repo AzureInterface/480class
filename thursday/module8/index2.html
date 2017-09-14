@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BinaryReader Demo!</title>
+    <style>
+        body{
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Let's read some binary data!</h1>
+    <input type="file" id="file" onchange="LoadImageFile()"><br><br>
+    <img id="myImage">
+
+    <script>
+        function LoadImageFile(){
+            var fileInput = document.getElementById('file');
+            //console.log(fileInput.files[0]);
+
+            var reader = new FileReader();
+
+            reader.onload = function(e){
+                var imageElement = document.getElementById('myImage');
+                imageElement.src = e.target.result;
+            }
+
+            reader.onerror = function(e){
+                alert('something went wrong');
+            }
+
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    </script>
+</body>
+</html>
