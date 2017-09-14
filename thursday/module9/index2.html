@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Offline 2</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        var id = Math.floor(Math.random() * 20);
+
+        //console.log(id);
+        //localStorage.setItem('userId', id);
+
+        document.getElementById('container').innerHTML = 
+            localStorage.getItem('userId');
+
+    </script>
+</body>
+</html>
