@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Slider</title>
+</head>
+<body>
+    <img name="slide" width="640" height="480" src="" alt="">
+
+    <script>
+        var i = 0;
+        var images = [];
+        var time = 3000;
+
+        images[0] = 'monkey1.jpg'
+        images[1] = 'monkey2.jpg'
+        images[2] = 'monkey3.jpg'
+
+        function changeImg(){
+            document.slide.src = images[i];
+
+            if(i < images.length -1){
+                i++;
+            }
+            else {
+                i = 0;
+            }
+
+            setTimeout(changeImg, time);
+        }
+
+        window.onload = changeImg();
+
+    </script>
+
+</body>
+</html>
