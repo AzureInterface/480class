@@ -1,0 +1,13 @@
+Web technology for developers (mozilla docs)
+https://developer.mozilla.org/en-US/docs/
+
+Remembering what CSS to prefix is hard
+http://shouldiprefix.com/
+
+http://caniuse.com/
+
+Live Editor
+https://jsfiddle.net/
+
+Another Cool Live Editor
+https://codepen.io/pen/
