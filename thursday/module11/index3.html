@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Canvas Demo2</title>
+</head>
+<body>
+    <img id="myImg" src="server.jpg" alt="">
+
+    <canvas id="myCanvas" width="640" height="360" style="border: 1px solid black"
+    ></canvas>
+
+    <script>
+        window.onload = function(){
+            var myCanvas = document.getElementById('myCanvas');
+            var ctx = myCanvas.getContext('2d');
+            var img = document.getElementById('myImg');
+
+            console.log(myCanvas);
+            console.log(ctx);
+            console.log(img);
+
+            ctx.drawImage(img, 0,0);
+
+            ctx.font = '150px verdana;'
+            ctx.fillText("Hello World", 10, 50);
+        }
+    </script>
+
+</body>
+</html>
