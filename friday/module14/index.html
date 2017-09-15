@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Background Worker Demo</title>
+    <style>
+        body{
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <p>Status: <span id="msg"></span></p>
+    <button id="start" onclick="startWorker()">Start Working</button>
+    <button id="stop" onclick="stopWorker()">Stop Working</button>
+
+    <script>
+        var w;
+
+        function startWorker(){
+            w = new Worker('worker.js');
+
+            w.onmessage = function(e){
+                document.getElementById('msg').innerHTML = e.data;
+            }
+        }
+
+        function stopWorker(){
+            w.terminate();
+            w = undefined;
+        }
+
+    </script>
+</body>
+</html>
