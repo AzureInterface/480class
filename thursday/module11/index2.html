@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Canvas Demo</title>
+</head>
+<style>
+    canvas {
+        border: 1px solid black;
+    }
+</style>
+<!-- https://www.w3schools.com/graphics/game_intro.asp -->
+<body>
+    <canvas id="myCanvas" width="350" height="100"></canvas>
+
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = '#000000';
+        //ctx.fillRect(0,0,150,75);
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,2*Math.PI);
+        ctx.stroke();
+
+        ctx.font = '32px verdana';
+        ctx.fillText('hello world', 10, 50);
+
+    </script>
+</body>
+</html>
