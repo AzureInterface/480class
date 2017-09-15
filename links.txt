@@ -15,3 +15,5 @@ https://codepen.io/pen/
 https://pixabay.com/
 
 https://www.w3schools.com/w3css/w3css_slideshow.asp
+
+https://www.visualstudio.com/vs/older-downloads
