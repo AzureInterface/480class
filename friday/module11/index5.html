@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>3D Tranform</title>
+</head>
+<style>
+        div{
+            font-size: 36px;
+        }
+        #parent {
+            perspective: 300px;
+            perspective-origin: -100px -50px;
+            margin-top: 50px;
+        }
+        #child1 {
+            background-color: orange;
+            position: absolute;
+            transform-origin: 0px 0px;
+            transform: rotateY(30deg);
+        }
+        #child2 {
+            background-color: orange;
+            position: absolute;
+            transform-origin: 0px 0px;
+            transform: rotateY(30deg) translate(250px);
+        }
+    </style>
+<body>
+        <div id="parent">
+                <div id="child1">This is child1</div>
+                <div id="child2">This is child2</div>
+            </div> 
+</body>
+</html>

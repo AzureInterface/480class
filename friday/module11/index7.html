@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Animate.css</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+    <style>
+            header{
+                background-color: blue;
+                padding: 30px;
+                color: white;
+                border-radius:5px;
+            }
+            section{
+                border: 1px solid black;
+                padding: 15px 45px;
+                background-color: #f2f2f2;
+                margin: 20px 0 20px 0;
+                border-radius: 5px;
+                animation-delay: 1s;
+                animation-duration: 1s;
+            }
+            .container{
+                width:80%;
+                margin:auto;
+            }
+        </style>    
+</head>
+<body>
+        <div class="container">
+                <header class="header animated rubberBand">
+                    <H1>Animate Demo</H1>
+                </header>
+                <section id="section1" class="animated fadeInLeft">
+                    <h1>Section One</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aperiam temporibus illo similique doloremque veritatis nemo, harum iusto iure dolorum excepturi aliquam nam placeat! Numquam harum adipisci accusantium et. Qui ipsa dolorum quibusdam. Illum architecto nulla nemo sit. Mollitia nulla quaerat quis pariatur vero dolorum quos suscipit, quo magnam ratione!</p>
+                </section>
+                <section id="section2" class="animated fadeInRight">
+                        <h1 id="header2">Section Two</h1>
+                        <p id="body2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aperiam temporibus illo similique doloremque veritatis nemo, harum iusto iure dolorum excepturi aliquam nam placeat! Numquam harum adipisci accusantium et. Qui ipsa dolorum quibusdam. Illum architecto nulla nemo sit. Mollitia nulla quaerat quis pariatur vero dolorum quos suscipit, quo magnam ratione!</p>
+                    <button id="animateBtn">Animate!</button>
+                    </section>
+            </div>   
+    <script>
+            $(function(){
+
+                $('#animateBtn').click(function(){
+                    animate('#header2', 'bounce');
+                    animate('#body2', 'rubberBand');
+                });
+
+                function animate(element, animation){
+                    $(element).addClass('animated ' + animation);
+                }
+
+            });
+        </script>             
+</body>
+</html>

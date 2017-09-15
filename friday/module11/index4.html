@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Transitions & Transforms</title>
+    <style>
+        div{
+            margin-top: 25px;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            transition-property: width;
+            transition-delay: 1s;
+            transition-duration: 4s;
+            transition-timing-function: ease-in-out;
+            transform: translate(60px, 100px) skew(45deg);
+        }
+        div:hover{
+            background-color: red;
+            width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

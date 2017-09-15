@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Keyframe animation & transform</title>
+    <style>
+        @keyframes myKeyframe {
+            from{
+                background-color: red;
+            }
+            to {
+                background-color: yellow;
+            }
+        }
+
+        .animate{
+            transform: rotate(20deg);
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid black;
+            animation-name: myKeyframe;
+            animation-duration: 2s;
+            animation-delay: 2s;
+            animation-iteration-count: 3;            
+            /*
+            animation: myKeyframe 5s linear 2s infinite alternate;
+            */
+            
+        }
+        button{ margin-top: 20px;}
+
+    </style>
+</head>
+<body>
+    <h1 id="header"></h1>
+    <div id="div1"></div>
+    <button id="aBtn" onclick="animateDiv()">Animate!</button>
+
+    <script>
+        function animateDiv(){
+            var mydiv = document.getElementById('div1');
+            mydiv.classList.add('animate');   
+
+            mydiv.addEventListener('animationend', function(e){
+                document.getElementById('header').innerHTML = 'All done!';
+            });                     
+        }
+    </script>
+</body>
+</html>
